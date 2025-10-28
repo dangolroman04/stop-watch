@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    position: relative;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("p.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px);
+
+}
+
+.timer-wrapper{
+    padding: 5rem;
+    /* border: 1px solid red; */
+}
+
+.timer{
+    font-size: 5rem;
+    text-align: center;
+}
+
+.timer-btns{
+    margin: 2rem;
+}
+
+.millisecond{
+   position: relative; 
+}
+
+.millisecond:before{
+    content: ".";
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+.millisecond.active{
+    display: none;
+}
+
+.timer-btns > button{
+    width: 200px;
+    padding: 1rem 1rem;
+    background: black;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.timer-btns > .active{
+    background: gray;
+   
+}
+
